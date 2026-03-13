@@ -15,9 +15,10 @@ body {
     line-height: 1.6;
 }
 
-/* Polices ornementales */
-.ornamental {
-    font-family: 'Caesar Dressing', cursive; /* Police ornementale rétro-spacey */
+/* NOUVEAU : Polices ornementales LISSES (Cinzel Decorative) */
+/* On l'applique à la classe .ornamental ET aux titres h2 */
+.ornamental, h2 {
+    font-family: 'Cinzel Decorative', serif; /* Police ornementale lisse et classe */
     text-transform: uppercase;
     font-weight: 400;
 }
@@ -70,7 +71,7 @@ main {
     margin-bottom: 1.5rem;
 }
 
-/* NOUVEAU : Les cartes (blocs sombres) maintenant transparentes */
+/* Les cartes (blocs sombres) maintenant transparentes */
 .card {
     /* Violet sombre très profond avec 85% d'opacité (rgba) */
     background-color: rgba(26, 15, 46, 0.85); 
@@ -83,6 +84,7 @@ main {
     border: 1px solid rgba(255, 235, 204, 0.1); /* Bordure or très fine */
 }
 
+/* Style des titres H2 (qui utilisent maintenant la police lisse) */
 .card h2 {
     margin-top: 0;
     color: #fff;
