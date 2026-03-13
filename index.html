@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PAPY EVENT - Saint Jean Pla de Corts</title>
     
-    <link rel="icon" href="./photo/logo_papy1.png" type="image/png">
-    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
@@ -14,15 +12,23 @@
 <body>
 
     <header>
-        <div class="logo-container">
-            <img src="./photo/logo.png" alt="PAPY EVENT" class="main-logo-img">
+        <div class="header-badge">
+            <span class="sparkle-badge left">✦</span>
+            <p>CHEZ PAPY EVENTS PRÉSENTE</p>
+            <span class="sparkle-badge right">✦</span>
         </div>
+        
+        <div class="title-container">
+            <span class="sparkle left-sparkle">✦</span>
+            <h1 class="sobre-title">PAPY EVENT</h1>
+            <div class="date-stamp sobre">17/18 JUILLET 2026</div>
+        </div>
+        
+        <p class="sobre-info private-event">Évènement Privé</p>
+        <p class="sobre-info dj-set">DJ SET BY <span class="dj-name">GUILLEM FI</span></p>
     </header>
 
     <main>
-        <p class="ornamental text-center private-event">Évènement Privé</p>
-        <p class="ornamental text-center dj-set">DJ SET BY <span class="dj-name">GUILLEM FI</span></p>
-        
         <section class="card program-card text-center compact-program">
             <p class="program-list">
                 dj set • repas offert • service open bar • actividades extérieures • <br/>
@@ -35,7 +41,7 @@
         </section>
 
         <section class="card form-card">
-            <h2 class="form-title ornamental text-center">👋 CONFIRME TA PRÉSENCE</h2>
+            <h2 class="form-title text-center">👋 CONFIRME TA PRÉSENCE</h2>
             <p class="text-center form-instruction">Dis-nous que tu veux venir (sans engagement).</p>
             
             <form id="interest-form">
@@ -58,27 +64,19 @@
         </section>
         
         <section class="card text-center qr-card">
-            <h2 class="ornamental text-center qr-title">SCANNE POUR PLUS D'INFOS</h2>
+            <h2 class="text-center qr-title">SCANNE POUR PLUS D'INFOS</h2>
             <img src="./photo/qr_code.png" alt="QR Code de l'événement" class="qr-code">
         </section>
     </main>
 
     <footer>
-        <div class="price-box-revised ornamental text-center">
+        <div class="price-box-revised text-center">
             <p class="price-line line1">TARIFS 40€ par soirs</p>
             <p class="price-line line2">60€ les deux</p>
         </div>
         
         <p class="organizer text-center">Organisé par Logan Hernandez | Saint Jean Pla de Corts</p>
-        
-        <div class="contact-links text-center">
-            <a href="https://www.instagram.com/chez.papy.events" target="_blank" class="contact-btn insta-btn">
-                📸 plus d'infos @chez.papy.events
-            </a>
-            <a href="mailto:chezpapyevent@gmail.com" class="contact-btn email-btn">
-                ✉️ Nous contacter par email
-            </a>
-        </div>
+        <p class="text-center instagram-handle">plus d'infos @chez.papy.events</p>
     </footer>
 
     <script src="script.js"></script>

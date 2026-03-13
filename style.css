@@ -1,53 +1,4 @@
-/* --- NOUVEAUX STYLES POUR LOGO ROND ET ZOOMÉ --- */
-
-/* 1. Target the containing header to center the logo container */
-header {
-    text-align: center; /* Important pour centrer le conteneur inline-block */
-    padding: 2rem 1rem 1rem;
-    position: relative;
-    max-width: 800px;
-    width: 90%;
-    margin: 0 auto;
-}
-
-/* 2. Target the circular clipped container (.logo-container) */
-.logo-container {
-    width: 250px; /* Taille désirée pour le cercle - large comme demandé précédemment */
-    height: 250px;
-    border-radius: 50%; /* Crée la forme circulaire */
-    overflow: hidden; /* INDISPENSABLE : Masque tout ce qui dépasse pour créer l'effet de zoom */
-    display: inline-block; /* Permet d'avoir un bord circulaire parfait */
-    margin: 0 auto 2rem; /* Centre sur la page, ajoute de l'espace sous le logo */
-    position: relative; /* Définit un contexte de positionnement pour l'image intérieure */
-    /* Styling visuel : bordure et ombre */
-    border: 2px solid rgba(255, 235, 204, 0.2);
-    box-shadow: 0 0 20px rgba(255, 102, 51, 0.4);
-    background-color: rgba(26, 15, 46, 0.9); /* Ajoute un fond sombre pour combler les vides si image transparente */
-}
-
-/* 3. Target the image inside (.main-logo-img) to make it huge and position it (zoom) */
-.main-logo-img {
-    max-width: none; /* Annule les anciennes règles de redimensionnement */
-    max-height: none;
-    display: block;
-    width: 300%; /* Rend l'image 3x plus grande que le conteneur (effet zoom) */
-    height: auto;
-    position: absolute; /* Place l'image de manière absolue par rapport au conteneur */
-    /* Positionnement précis pour cadrer la figure centrale (Papy) de ton image.
-       On centre l'image, puis on la décale pour cadrer le personnage. */
-    left: 50%;
-    top: 50%;
-    /* translate(-50%, -50%) centrerait l'image géométriquement.
-       Ici, on décale plus pour cadrer le visage et le corps. 
-       Les valeurs suivantes sont optimisées pour cadrer le personnage de l'image source */
-    transform: translate(-65%, -70%); 
-}
-
-/* --- FIN DES STYLES DU LOGO --- */
-
-/* --- LE RESTE DE TES STYLES EST INCHANGÉ --- */
-
-/* Réglages de base et image de fond granuleuse locale */
+/* Réglages de base et image de fond granuleuse locale, on la garde */
 body {
     font-family: 'Poppins', sans-serif; /* Police de base propre */
     background-color: #1a0f2e; /* Couleur sombre de sécurité */
@@ -64,17 +15,86 @@ body {
     line-height: 1.6;
 }
 
-/* Polices ornementales LISSES (on les garde au cas où) */
+/* NOUVEAU : On désactive les styles ornementaux pour tous les textes */
 .ornamental {
-    font-family: 'Poppins', sans-serif; /* Police propre unifiée */
+    font-family: 'Poppins', sans-serif; /* Police standard, sobre */
     text-transform: none; /* Pas de majuscules automatiques */
     font-weight: 400; /* Poids normal */
 }
 
-/* Informations secondaires ornementales (sobrement stylisées) */
-.private-event {
+/* --- STYLES POUR L'EN-TÊTE SOBRE ET STRUCTURÉ --- */
+
+/* Header sobre */
+header {
+    text-align: center;
+    padding: 4rem 1rem 2rem;
+    position: relative;
+    max-width: 800px;
+    width: 90%;
+}
+
+/* Badge central ovale en CSS sobre, comme demandé */
+.header-badge {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    color: #333;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    width: auto;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sparkle-badge {
+    color: #333;
+    font-size: 0.8rem;
+}
+
+/* Titre principal structuré, SANS le grand rond */
+.title-container {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.sobre-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 4rem;
+    letter-spacing: 5px;
+    color: #fff;
+    margin: 0;
+}
+
+/* Sparkles discrets */
+.sparkle {
+    color: #fff;
+    font-size: 1rem;
+}
+
+.left-sparkle {
+    margin-right: -10px;
+}
+
+.sobre-info {
+    font-family: 'Poppins', sans-serif;
     color: #ffcc99;
     font-size: 1.1rem;
+    margin: 1rem 0 0.2rem;
+}
+
+/* Infos secondaires sobres */
+.private-event {
     margin: 1rem 0 0.2rem;
     font-weight: 600; /* Un peu plus gras pour l'info importante */
 }
