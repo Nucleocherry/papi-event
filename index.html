@@ -3,55 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Papi Event</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Événement Été - Saint Jean Pla de Corts</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="min-h-screen bg-gray-50 text-gray-900 font-sans">
+<body>
 
-    <section class="bg-white border-b py-24 px-4 text-center shadow-sm">
-        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-gray-900 mb-6">
-            Papi Event
-        </h1>
-        <p class="text-xl md:text-2xl text-gray-600 max-w-2xl mx-auto mb-10">
-            Rejoignez-nous pour l'événement de l'année. Une journée inoubliable vous attend.
-        </p>
-        <button class="bg-black text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-800 transition-colors flex items-center justify-center mx-auto shadow-lg hover:shadow-xl">
-            Je confirme ma présence 
-            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-        </button>
-    </section>
+    <header>
+        <h1>La Grosse Soirée de l'Été</h1>
+        <p class="subtitle">Organisé par Logan Hernandez</p>
+    </header>
 
-    <section class="max-w-5xl mx-auto py-20 px-4 grid md:grid-cols-3 gap-8">
-        
-        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-md transition-shadow">
-            <div class="bg-blue-50 p-4 rounded-full mb-4">
-                <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-            </div>
-            <h3 class="font-bold text-xl mb-2">Date</h3>
-            <p class="text-gray-600">Samedi 15 Août 2026</p>
-        </div>
-        
-        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-md transition-shadow">
-            <div class="bg-blue-50 p-4 rounded-full mb-4">
-                <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            </div>
-            <h3 class="font-bold text-xl mb-2">Heure</h3>
-            <p class="text-gray-600">À partir de 18h00</p>
-        </div>
+    <main>
+        <section class="card">
+            <h2>🎉 Au programme</h2>
+            <ul class="info-list">
+                <li><strong>📅 Dates :</strong> 7 et 8 Juillet (à confirmer)</li>
+                <li><strong>📍 Lieu :</strong> Un grand jardin à Saint Jean Pla de Corts</li>
+                <li><strong>🎵 Ambiance :</strong> DJ en live pour animer l'événement</li>
+                <li><strong>🍺 Boissons :</strong> Bière locale avec notre semi-sponsor <strong>Cap Dona</strong> (Fûts, tireuses et tables sur place !)</li>
+            </ul>
+        </section>
 
-        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-md transition-shadow">
-            <div class="bg-blue-50 p-4 rounded-full mb-4">
-                <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-            </div>
-            <h3 class="font-bold text-xl mb-2">Lieu</h3>
-            <p class="text-gray-600">Paris, Île-de-France<br/><span class="text-sm">(L'adresse exacte sera envoyée aux inscrits)</span></p>
-        </div>
+        <section class="card text-center">
+            <h2>📱 Scannez pour plus d'infos</h2>
+            <img src="https://via.placeholder.com/200?text=Ton+QR+Code+Ici" alt="QR Code de l'événement" class="qr-code">
+            <p class="small-text">(Remplace cette image par ton vrai QR code plus tard)</p>
+        </section>
 
-    </section>
+        <section class="card">
+            <h2>👋 Ça t'intéresse ?</h2>
+            <p>Laisse tes infos pour qu'on sache que tu veux venir (sans engagement).</p>
+            
+            <form id="interest-form">
+                <div class="input-group">
+                    <label for="prenom">Prénom</label>
+                    <input type="text" id="prenom" required>
+                </div>
+                <div class="input-group">
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <button type="submit">Je suis chaud(e) !</button>
+            </form>
+            
+            <p id="success-message" class="hidden">Super ! Tes infos sont notées en attendant la suite.</p>
+        </section>
+    </main>
 
-    <footer class="text-center py-8 text-gray-400 text-sm">
-        © 2026 Papi Event. Tous droits réservés.
+    <footer>
+        <p>© 2026 - Événement organisé par Logan Hernandez</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
