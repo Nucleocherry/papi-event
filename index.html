@@ -3,36 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Événement Été - Saint Jean Pla de Corts</title>
+    <title>PAPY EVENT - Saint Jean Pla de Corts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Jost:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>La Grosse Soirée de l'Été</h1>
-        <p class="subtitle">Organisé par Logan Hernandez</p>
+        <div class="header-badge">
+            <p>CHEZ PAPY EVENTS PRÉSENTE</p>
+        </div>
+        
+        <div class="title-container">
+            <h1 class="ornamental">PAPY EVENT</h1>
+            <div class="date-stamp ornamental">17/18 JUILLET 2026</div>
+        </div>
+        
+        <p class="ornamental private-event">Évènement Privé</p>
+        <p class="ornamental dj-set">DJ SET BY <span class="dj-name">GUILLEM FI</span></p>
     </header>
 
     <main>
-        <section class="card">
-            <h2>🎉 Au programme</h2>
-            <ul class="info-list">
-                <li><strong>📅 Dates :</strong> 7 et 8 Juillet (à confirmer)</li>
-                <li><strong>📍 Lieu :</strong> Un grand jardin à Saint Jean Pla de Corts</li>
-                <li><strong>🎵 Ambiance :</strong> DJ en live pour animer l'événement</li>
-                <li><strong>🍺 Boissons :</strong> Bière locale avec notre semi-sponsor <strong>Cap Dona</strong> (Fûts, tireuses et tables sur place !)</li>
-            </ul>
+        <section class="card program-card text-center">
+            <p class="program-list">
+                dj set • repas offert • service open bar • <br/>
+                activités extérieures • bierre cap d'ona • <br/>
+                chill zone • et plus encore...
+            </p>
+            <p class="cap-dona-details">
+                Merci à notre semi-sponsor <strong>Cap Dona</strong> <br/>
+                (Tâbles, fûts et tireuses fournis !)
+            </p>
         </section>
 
-        <section class="card text-center">
-            <h2>📱 Scannez pour plus d'infos</h2>
+        <section class="card text-center qr-card">
+            <h2>SCANNE POUR PLUS D'INFOS</h2>
             <img src="https://via.placeholder.com/200?text=Ton+QR+Code+Ici" alt="QR Code de l'événement" class="qr-code">
-            <p class="small-text">(Remplace cette image par ton vrai QR code plus tard)</p>
+            <p class="small-text">(Remplace cette image par ton vrai QR code)</p>
         </section>
 
-        <section class="card">
-            <h2>👋 Ça t'intéresse ?</h2>
-            <p>Laisse tes infos pour qu'on sache que tu veux venir (sans engagement).</p>
+        <section class="card form-card">
+            <h2>👋 CONFIRME TA PRÉSENCE</h2>
+            <p>Dis-nous que tu veux venir (sans engagement).</p>
             
             <form id="interest-form">
                 <div class="input-group">
@@ -47,15 +59,21 @@
                     <label for="email">Email</label>
                     <input type="email" id="email" required>
                 </div>
-                <button type="submit">Je suis chaud(e) !</button>
+                <button type="submit">JE SUIS CHAUD(E) !</button>
             </form>
             
-            <p id="success-message" class="hidden">Super ! Tes infos sont notées en attendant la suite.</p>
+            <p id="success-message" class="hidden">SUPER ! Tes infos sont notées.</p>
         </section>
     </main>
 
     <footer>
-        <p>© 2026 - Événement organisé par Logan Hernandez</p>
+        <div class="price-box ornamental">
+            <p>TARIFS 40€ par soirs</p>
+            <p>60€ les deux</p>
+        </div>
+        
+        <p class="organizer">Organisé par Logan Hernandez | Saint Jean Pla de Corts</p>
+        <p class="ornamental instagram-handle">plus d'infos @chez.papy.events</p>
     </footer>
 
     <script src="script.js"></script>

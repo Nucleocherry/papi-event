@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('interest-form');
     const successMessage = document.getElementById('success-message');
 
-    // Quand quelqu'un clique sur "Je suis chaud(e) !"
+    // Quand quelqu'un clique sur "JE SUIS CHAUD(E) !"
     form.addEventListener('submit', (evenement) => {
         // On empêche la page de se recharger (le comportement par défaut)
         evenement.preventDefault();
