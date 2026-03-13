@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Récupération des éléments du formulaire et du message
     const form = document.getElementById('interest-form');
     const successMessage = document.getElementById('success-message');
-    const errorMessage = document.getElementById('error-message');
+    const errorMessage = document.getElementById('error-message'); // C'est pour ton débogage, il ne s'affichera plus en front
 
     if (!form || !successMessage || !errorMessage) {
         console.error("Erreur: Un ou plusieurs éléments n'ont pas été trouvés dans le DOM. Vérifie tes IDs.");
@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // --- NOUVEAU : On force l'affichage du succès, peu importe la réponse ---
             
             // Cache le formulaire
+            // C'est ici que le "truc qui ferme le fait d'écrire" est activé !
             form.classList.add('hidden');
             // Montre le message de succès
             successMessage.classList.remove('hidden');
