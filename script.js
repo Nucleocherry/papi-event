@@ -1,24 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // Récupération des éléments du formulaire et du message
+    // Vérification de la sélection des éléments
     const form = document.getElementById('interest-form');
     const successMessage = document.getElementById('success-message');
-    const errorMessage = document.getElementById('error-message'); // C'est pour ton débogage, il ne s'affichera plus en front
+    const errorMessage = document.getElementById('error-message');
 
     if (!form || !successMessage || !errorMessage) {
         console.error("Erreur: Un ou plusieurs éléments n'ont pas été trouvés dans le DOM. Vérifie tes IDs.");
         return;
     }
 
-    // NOUVEAU : Ton lien Formspree exact est inséré ici
     const endpoint = "https://formspree.io/f/xojkleye";
 
-    // Quand quelqu'un clique sur le bouton de soumission
     form.addEventListener('submit', async (event) => {
-        // Empêche le rechargement par défaut de la page
         event.preventDefault();
 
-        // Récupération des données du formulaire
         const formData = new FormData(form);
 
         // Cache les messages précédents avant de soumettre
@@ -26,9 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         errorMessage.classList.add('hidden');
 
         try {
-            // Envoie les données vers ton endpoint Formspree
-            // On n'attend pas la réponse (pas de 'await' ici)
-            fetch(endpoint, {
+            const response = await fetch(endpoint, {
                 method: 'POST',
                 body: formData,
                 headers: {
@@ -36,22 +29,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            // --- NOUVEAU : On force l'affichage du succès, peu importe la réponse ---
-            
-            // Cache le formulaire
-            // C'est ici que le "truc qui ferme le fait d'écrire" est activé !
-            form.classList.add('hidden');
-            // Montre le message de succès
-            successMessage.classList.remove('hidden');
-
-            console.log("Formulaire soumis. Succès forcé en front.");
-
+            if (response.ok) {
+                form.classList.add('hidden');
+                successMessage.classList.remove('hidden');
+            } else {
+                // Formspree a renvoyé une erreur (400, 422, 429)
+                console.error("Erreur renvoyée par Formspree. Statut:", response.status);
+                errorMessage.classList.remove('hidden');
+            }
         } catch (error) {
-            // Cette partie ne sera presque jamais atteinte car on n'attend pas la réponse
-            console.error('Erreur Réseau potentielle:', error);
-            // On peut quand même choisir d'afficher le succès ici pour être sûr
-            form.classList.add('hidden');
-            successMessage.classList.remove('hidden');
+            // Erreur réseau (pas d'internet, etc.)
+            console.error('Erreur Réseau:', error);
+            errorMessage.classList.remove('hidden');
         }
     });
 });
