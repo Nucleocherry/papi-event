@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PAPY EVENT - Saint Jean Pla de Corts</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Jost:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=Cinzel+Decorative:wght@400;700&family=Jost:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,21 +14,24 @@
             <p>CHEZ PAPY EVENTS PRÉSENTE</p>
         </div>
         
-        <div class="title-container">
-            <h1 class="ornamental">PAPY EVENT</h1>
-            <div class="date-stamp ornamental">17/18 JUILLET 2026</div>
+        <div class="title-date-container">
+            <span class="sparkle left-sparkle ornamental">✦</span>
+            <h1 class="ornamental ornamental-title">PAPY EVENT</h1>
+            <div class="date-container-compact">
+                <span class="sparkle right-sparkle-small ornamental">✦</span>
+                <p class="ornamental compact-date">17/18 JUILLET 2026</p>
+            </div>
         </div>
-        
-        <p class="ornamental private-event">Évènement Privé</p>
-        <p class="ornamental dj-set">DJ SET BY <span class="dj-name">GUILLEM FI</span></p>
     </header>
 
     <main>
-        <section class="card program-card text-center">
+        <p class="ornamental text-center private-event">Évènement Privé</p>
+        <p class="ornamental text-center dj-set">DJ SET BY <span class="dj-name">GUILLEM FI</span></p>
+        
+        <section class="card program-card text-center compact-program">
             <p class="program-list">
-                dj set • repas offert • service open bar • <br/>
-                activités extérieures • bierre cap d'ona • <br/>
-                chill zone • et plus encore...
+                dj set • repas offert • service open bar • actividades extérieures • <br/>
+                bierre cap d'ona • chill zone • et plus encore...
             </p>
             <p class="cap-dona-details">
                 Merci à notre semi-sponsor <strong>Cap Dona</strong> <br/>
@@ -36,15 +39,9 @@
             </p>
         </section>
 
-        <section class="card text-center qr-card">
-            <h2>SCANNE POUR PLUS D'INFOS</h2>
-            <img src="https://via.placeholder.com/200?text=Ton+QR+Code+Ici" alt="QR Code de l'événement" class="qr-code">
-            <p class="small-text">(Remplace cette image par ton vrai QR code)</p>
-        </section>
-
         <section class="card form-card">
-            <h2>👋 CONFIRME TA PRÉSENCE</h2>
-            <p>Dis-nous que tu veux venir (sans engagement).</p>
+            <h2 class="form-title ornamental text-center">👋 CONFIRME TA PRÉSENCE</h2>
+            <p class="text-center form-instruction">Dis-nous que tu veux venir (sans engagement).</p>
             
             <form id="interest-form">
                 <div class="input-group">
@@ -64,16 +61,22 @@
             
             <p id="success-message" class="hidden">SUPER ! Tes infos sont notées.</p>
         </section>
+        
+        <section class="card text-center qr-card">
+            <h2 class="ornamental text-center qr-title">SCANNE POUR PLUS D'INFOS</h2>
+            <img src="https://via.placeholder.com/200?text=Ton+QR+Code+Ici" alt="QR Code de l'événement" class="qr-code">
+            <p class="small-text">(Remplace cette image par ton vrai QR code)</p>
+        </section>
     </main>
 
     <footer>
-        <div class="price-box ornamental">
-            <p>TARIFS 40€ par soirs</p>
-            <p>60€ les deux</p>
+        <div class="price-box-revised ornamental text-center">
+            <p class="price-line line1">TARIFS 40€ par soirs</p>
+            <p class="price-line line2">60€ les deux</p>
         </div>
         
-        <p class="organizer">Organisé par Logan Hernandez | Saint Jean Pla de Corts</p>
-        <p class="ornamental instagram-handle">plus d'infos @chez.papy.events</p>
+        <p class="organizer text-center">Organisé par Logan Hernandez | Saint Jean Pla de Corts</p>
+        <p class="ornamental text-center instagram-handle">plus d'infos @chez.papy.events</p>
     </footer>
 
     <script src="script.js"></script>
