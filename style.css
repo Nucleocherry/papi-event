@@ -1,7 +1,55 @@
+/* --- NOUVEAUX STYLES POUR LOGO ROND ET ZOOMÉ --- */
+
+/* 1. Target the containing header to center the logo container */
+header {
+    text-align: center; /* Important pour centrer le conteneur inline-block */
+    padding: 2rem 1rem 1rem;
+    position: relative;
+    max-width: 800px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* 2. Target the circular clipped container (.logo-container) */
+.logo-container {
+    width: 250px; /* Taille désirée pour le cercle - large comme demandé précédemment */
+    height: 250px;
+    border-radius: 50%; /* Crée la forme circulaire */
+    overflow: hidden; /* INDISPENSABLE : Masque tout ce qui dépasse pour créer l'effet de zoom */
+    display: inline-block; /* Permet d'avoir un bord circulaire parfait */
+    margin: 0 auto 2rem; /* Centre sur la page, ajoute de l'espace sous le logo */
+    position: relative; /* Définit un contexte de positionnement pour l'image intérieure */
+    /* Styling visuel : bordure et ombre */
+    border: 2px solid rgba(255, 235, 204, 0.2);
+    box-shadow: 0 0 20px rgba(255, 102, 51, 0.4);
+    background-color: rgba(26, 15, 46, 0.9); /* Ajoute un fond sombre pour combler les vides si image transparente */
+}
+
+/* 3. Target the image inside (.main-logo-img) to make it huge and position it (zoom) */
+.main-logo-img {
+    max-width: none; /* Annule les anciennes règles de redimensionnement */
+    max-height: none;
+    display: block;
+    width: 300%; /* Rend l'image 3x plus grande que le conteneur (effet zoom) */
+    height: auto;
+    position: absolute; /* Place l'image de manière absolue par rapport au conteneur */
+    /* Positionnement précis pour cadrer la figure centrale (Papy) de ton image.
+       On centre l'image, puis on la décale pour cadrer le personnage. */
+    left: 50%;
+    top: 50%;
+    /* translate(-50%, -50%) centrerait l'image géométriquement.
+       Ici, on décale plus pour cadrer le visage et le corps. 
+       Les valeurs suivantes sont optimisées pour cadrer le personnage de l'image source */
+    transform: translate(-65%, -70%); 
+}
+
+/* --- FIN DES STYLES DU LOGO --- */
+
+/* --- LE RESTE DE TES STYLES EST INCHANGÉ --- */
+
 /* Réglages de base et image de fond granuleuse locale */
 body {
-    /* NOUVEAU : On applique la police propre "Poppins" partout */
-    font-family: 'Poppins', sans-serif; 
+    font-family: 'Poppins', sans-serif; /* Police de base propre */
     background-color: #1a0f2e; /* Couleur sombre de sécurité */
     background-image: url('./photo/fond_ecran.png'); 
     background-size: cover;
@@ -16,38 +64,14 @@ body {
     line-height: 1.6;
 }
 
-/* NOUVEAU : On supprime les styles ornementaux pour tous les textes */
+/* Polices ornementales LISSES (on les garde au cas où) */
 .ornamental {
-    font-family: 'Poppins', sans-serif; /* Police standard, sobre */
+    font-family: 'Poppins', sans-serif; /* Police propre unifiée */
     text-transform: none; /* Pas de majuscules automatiques */
     font-weight: 400; /* Poids normal */
 }
 
-/* En-tête simplifié pour le logo image */
-header {
-    text-align: center;
-    padding: 2rem 1rem;
-    position: relative;
-    max-width: 800px;
-    width: 90%;
-}
-
-/* Conteneur pour centrer le logo image */
-.logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Ton image logo centré */
-.main-logo-img {
-    max-width: 100%;
-    max-height: 250px; /* Taille maximum en hauteur pour pas qu'il mange tout l'écran */
-    display: block;
-    margin: 0 auto;
-}
-
-/* Informations ornementales secondaires (sobrement stylisées) */
+/* Informations secondaires ornementales (sobrement stylisées) */
 .private-event {
     color: #ffcc99;
     font-size: 1.1rem;
@@ -72,7 +96,7 @@ main {
     margin-bottom: 1.5rem;
 }
 
-/* NOUVEAU : Les cartes (blocs sombres) maintenant transparentes */
+/* Les cartes (blocs sombres) maintenant transparentes */
 .card {
     /* Violet sombre très profond avec 85% d'opacité (rgba) */
     background-color: rgba(26, 15, 46, 0.85); 
@@ -85,7 +109,7 @@ main {
     border: 1px solid rgba(255, 235, 204, 0.1); /* Bordure or très fine */
 }
 
-/* NOUVEAU : Titres H2 sobres et propres (plus gras, Sans-serif) */
+/* Titres H2 sobres et propres (plus gras, Sans-serif) */
 .card h2 {
     font-family: 'Poppins', sans-serif;
     font-weight: 800; /* Très gras pour les titres */
@@ -196,7 +220,7 @@ footer {
     max-width: 800px;
 }
 
-/* NOUVEAU : Bloc de prix encadré blanc sobre */
+/* Bloc de prix encadré blanc sobre */
 .price-box-revised {
     background-color: #fff; /* Fond blanc uni */
     color: #333; /* Texte sombre pour contraster */
