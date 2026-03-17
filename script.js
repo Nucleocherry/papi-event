@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // COLLE TON LIEN FORMSPREE ENTRE LES GUILLEMETS CI-DESSOUS :
-    const endpoint = "https://formspree.io/f/xojkleye";
+    const endpoint = "https://formspree.io/f/xyknbzae";
 
     // Quand quelqu'un clique sur le bouton de soumission
     form.addEventListener('submit', async (event) => {
