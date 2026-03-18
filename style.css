@@ -1,16 +1,12 @@
-/* style.css */
-
-/* Réglages de base */
+/* Réglages de base et image de fond granuleuse locale, on la garde */
 body {
     font-family: 'Poppins', sans-serif; 
-    /* Utilisation du marron le plus sombre comme fond principal */
-    background-color: #2f281b; 
+    background-color: #1a0f2e; /* Couleur sombre de sécurité */
     background-image: url('./photo/fond_ecran.png'); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    /* Utilisation de la couleur la plus claire pour le texte principal */
-    color: #be9580; 
+    color: #ffebcc; /* Couleur de texte or/crème pour contraster */
     margin: 0;
     padding: 0;
     display: flex;
@@ -19,15 +15,16 @@ body {
     line-height: 1.6;
 }
 
-/* Désactivation des styles ornementaux complexes pour un look propre */
+/* On désactive les styles ornementaux pour tous les textes */
 .ornamental {
-    font-family: 'Poppins', sans-serif;
-    text-transform: none;
-    font-weight: 400;
+    font-family: 'Poppins', sans-serif; /* Police standard, sobre */
+    text-transform: none; /* Pas de majuscules automatiques */
+    font-weight: 400; /* Poids normal */
 }
 
-/* --- EN-TÊTE --- */
+/* --- STYLES POUR L'EN-TÊTE SOBRE ET STRUCTURÉ --- */
 
+/* Header sobre */
 header {
     text-align: center;
     padding: 4rem 1rem 2rem;
@@ -36,16 +33,14 @@ header {
     width: 90%;
 }
 
-/* Badge central ovale */
+/* Badge central ovale en CSS sobre */
 .header-badge {
     position: absolute;
     top: 2rem;
     left: 50%;
     transform: translateX(-50%);
-    /* Fond clair pour contraster avec le fond sombre */
-    background: #be9580;
-    /* Texte sombre pour le badge */
-    color: #2f281b;
+    background: #fff;
+    color: #333;
     border-radius: 50px;
     padding: 10px 20px;
     font-size: 0.9rem;
@@ -59,11 +54,11 @@ header {
 }
 
 .sparkle-badge {
-    color: #2f281b;
+    color: #333;
     font-size: 0.8rem;
 }
 
-/* Titre principal */
+/* Titre principal structuré */
 .title-container {
     margin-top: 3rem;
     display: flex;
@@ -77,14 +72,13 @@ header {
     font-weight: 800;
     font-size: 4rem;
     letter-spacing: 5px;
-    /* Titre en couleur claire */
-    color: #be9580;
+    color: #fff;
     margin: 0;
 }
 
+/* Sparkles discrets */
 .sparkle {
-    /* Étoiles en couleur claire */
-    color: #be9580;
+    color: #fff;
     font-size: 1rem;
 }
 
@@ -94,12 +88,12 @@ header {
 
 .sobre-info {
     font-family: 'Poppins', sans-serif;
-    /* Utilisation du taupe pour les infos secondaires */
-    color: #8a7660;
+    color: #ffcc99;
     font-size: 1.1rem;
     margin: 1rem 0 0.2rem;
 }
 
+/* Infos secondaires sobres */
 .private-event {
     margin: 1rem 0 0.2rem;
     font-weight: 600; 
@@ -112,63 +106,57 @@ header {
 
 .dj-name {
     font-weight: bold;
-    /* Nom du DJ en bleu grisé pour ressortir */
-    color: #858da2;
+    color: #fff;
 }
 
-/* --- CONTENU PRINCIPAL --- */
-
+/* Conteneur principal */
 main {
     max-width: 800px;
     width: 90%;
     margin-bottom: 1.5rem;
 }
 
-/* Les cartes (blocs) */
+/* Les cartes (blocs sombres) transparentes */
 .card {
-    /* Fond moyen pour les cartes (plus clair que le body) */
-    background-color: #584e3a; 
+    background-color: rgba(26, 15, 46, 0.85); 
     backdrop-filter: blur(5px); 
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.5);
     margin-bottom: 1.5rem;
-    /* Bordure utilisant la couleur taupe */
-    border: 1px solid #8a7660; 
+    border: 1px solid rgba(255, 235, 204, 0.1); 
 }
 
-/* Titres H2 dans les cartes */
+/* Titres H2 sobres et propres */
 .card h2 {
     font-family: 'Poppins', sans-serif;
     font-weight: 800; 
     text-transform: uppercase;
     margin-top: 0;
-    /* Titre en couleur claire */
-    color: #be9580;
-    /* Ligne de soulignement en bleu (accent) */
-    border-bottom: 2px solid #858da2; 
+    color: #fff;
+    border-bottom: 2px solid #ff6633; 
     padding-bottom: 10px;
     letter-spacing: 1px; 
 }
 
-/* Programme */
+/* Liste du programme compacte */
 .compact-program .program-list {
     font-size: 1rem;
-    color: #be9580;
+    color: #ffebcc;
     margin-bottom: 0.5rem;
 }
 
-/* Partenaires */
+/* --- PARTENAIRES --- */
 .partners-section {
     margin-top: 1.5rem;
-    border-top: 1px solid #8a7660;
+    border-top: 1px solid rgba(255, 235, 204, 0.2);
     padding-top: 1rem;
 }
 
 .partners-title {
     font-size: 0.9rem;
     font-weight: 600;
-    color: #be9580;
+    color: #ffcc99;
     margin-bottom: 15px;
 }
 
@@ -187,21 +175,21 @@ main {
     filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.3)); 
 }
 
-/* QR Code & Boutons */
+/* QR Code */
 .text-center {
     text-align: center;
 }
 
 .qr-code {
     border-radius: 8px;
-    border: 1px solid #8a7660;
+    border: 1px solid rgba(255, 235, 204, 0.3);
     margin: 15px 0;
     max-width: 180px;
 }
 
 .qr-subtext {
     font-size: 0.9rem;
-    color: #8a7660;
+    color: #ffcc99;
     margin-top: 10px;
     font-style: italic;
 }
@@ -216,31 +204,28 @@ main {
 .input-group label {
     font-weight: 600;
     margin-bottom: 5px;
-    color: #be9580;
+    color: #ffcc99;
 }
 
 .input-group input {
     padding: 10px;
-    border: 1px solid #8a7660;
+    border: 1px solid rgba(255, 235, 204, 0.2);
     border-radius: 6px;
     font-size: 1rem;
-    /* Fond sombre pour les inputs */
-    background: #2f281b;
-    color: #be9580;
+    background: rgba(255, 235, 204, 0.05);
+    color: #fff;
     font-family: 'Poppins', sans-serif; 
 }
 
 .input-group input:focus {
-    /* Bordure bleue au focus pour accent */
-    border-color: #858da2;
+    border-color: #ff6633;
     outline: none;
-    box-shadow: 0 0 5px rgba(133, 141, 162, 0.4);
+    box-shadow: 0 0 5px rgba(255, 102, 51, 0.4);
 }
 
 button {
-    /* Bouton principal en bleu (accent de la palette) */
-    background-color: #858da2;
-    color: #2f281b;
+    background-color: #ff6633; 
+    color: #fff;
     border: none;
     padding: 12px 20px;
     font-size: 1.1rem;
@@ -255,11 +240,10 @@ button {
 }
 
 button:hover {
-    /* Hover : on passe sur la couleur claire */
-    background-color: #be9580;
-    color: #2f281b;
+    background-color: #e65c2a;
 }
 
+/* Utilitaires JS */
 .hidden {
     display: none;
 }
@@ -267,30 +251,29 @@ button:hover {
 #success-message {
     margin-top: 15px;
     padding: 15px;
-    background-color: #584e3a;
-    color: #be9580;
+    background-color: #2c3e50;
+    color: #fff;
     border-radius: 6px;
     text-align: center;
     font-weight: bold;
-    border: 1px solid #8a7660;
+    border: 1px solid rgba(255, 235, 204, 0.1);
 }
 
-/* --- PIED DE PAGE --- */
-
+/* Pied de page */
 footer {
     text-align: center;
     padding: 2rem 1rem 4rem;
-    color: #8a7660;
+    color: #7f8c8d;
     font-size: 0.95rem;
     width: 90%;
     max-width: 800px;
 }
 
-/* Bloc Prix */
+/* Bloc de prix encadré blanc sobre */
 .price-box-revised {
-    background-color: #be9580; 
-    color: #2f281b; 
-    border: 1px solid #584e3a; 
+    background-color: #fff; 
+    color: #333; 
+    border: 1px solid rgba(0, 0, 0, 0.1); 
     border-radius: 12px;
     padding: 15px 30px;
     display: inline-block;
@@ -311,14 +294,14 @@ footer {
 }
 
 .instagram-handle {
-    color: #be9580;
+    color: #fff;
     font-size: 1rem;
     margin-top: 0.2rem;
     font-family: 'Poppins', sans-serif;
     text-transform: none; 
 }
 
-/* Liens de contact */
+/* Zone de contact en bas */
 .contact-links {
     margin-top: 1.5rem;
     display: flex;
@@ -329,14 +312,14 @@ footer {
 
 .contact-btn {
     text-decoration: none;
-    color: #be9580;
+    color: #fff;
     padding: 10px 20px;
     border-radius: 8px;
     font-size: 1rem;
     font-weight: 600;
     transition: all 0.3s ease;
-    border: 1px solid #8a7660;
-    background: rgba(47, 40, 27, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.05);
     width: 80%;
     max-width: 300px;
     font-family: 'Poppins', sans-serif;
@@ -347,29 +330,27 @@ footer {
 }
 
 .contact-btn:hover {
-    background: #584e3a;
+    background: rgba(255, 255, 255, 0.15);
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    color: #be9580;
 }
 
 .insta-btn {
-    border-color: #858da2; 
+    border-color: #E1306C; 
 }
 
 .insta-btn:hover {
-    background: #858da2;
-    color: #2f281b;
+    background: rgba(225, 48, 108, 0.2);
 }
 
-/* Bouton Réserver (Style Ticket) */
+/* Bouton Réserver sous le QR Code (Style Ticket) */
 .btn-reserver {
     display: inline-flex;
     justify-content: center;
     align-items: center;
     gap: 8px;
-    background-color: #858da2;
-    color: #2f281b;
+    background-color: #ff6633;
+    color: #fff;
     text-decoration: none;
     padding: 12px 28px;
     font-size: 1.1rem;
@@ -379,11 +360,11 @@ footer {
     font-family: 'Poppins', sans-serif;
     transition: all 0.3s ease;
     margin: 10px 0 15px 0;
-    box-shadow: 0 0 20px rgba(133, 141, 162, 0.4);
+    box-shadow: 0 0 20px rgba(255, 102, 51, 0.4);
 }
 
 .btn-reserver:hover {
-    background-color: #be9580;
+    background-color: #e65c2a;
     transform: translateY(-2px);
-    box-shadow: 0 0 25px rgba(190, 149, 128, 0.6);
+    box-shadow: 0 0 25px rgba(255, 102, 51, 0.6);
 }
